@@ -1,0 +1,357 @@
+/* You can add global styles to this file, and also import other style files */
+:root{
+    --blue: #3852fc;
+    --grey: #787878;
+    --grey2: #ccc;
+    --grey3: #eee;
+    --grey4: #ababab;
+    --background: #f8f8f8;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: t-row;
+}
+
+html {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 14px;
+    color: var(--grey);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    margin: 0;
+}
+
+hr{
+    color: var(--grey4);
+}
+
+::-webkit-scrollbar{
+    width: 9px;
+}
+::-webkit-scrollbar-track{
+    background: #d8d8d8;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background: #707070;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover
+    {background: #888}
+
+.grid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 100%;
+    background-color: var(--background);
+    z-index: -22;
+}
+
+.background{
+    background-color: var(--background);
+}
+
+.grid-panel{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.gridi{
+    height: 100%;
+    z-index: 20;
+}
+
+.container > .header{
+    grid-column: 1 / 3;
+    display: inline;
+}
+
+.t-container{
+    grid-column: 1 / 3;
+}
+
+.address{
+    grid-column: 1 / 3;
+    padding: 16px;
+}
+
+.panel{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.panel > *:first-child{
+    margin-top: 64px;
+}
+.panel > *:last-child{
+    margin-bottom: 64px;
+}
+
+.panel > * {
+    margin: 0 64px;
+}
+
+.flex-grow{
+    flex-grow: 1;
+}
+
+.left-title{
+    font-weight: normal;
+}
+
+.left-panel-buttons{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button1{
+    padding: 16px 40px 16px 16px;
+    font-size: 15px;
+    color: var(--grey);
+    margin-left: 48px;
+    display: flex;
+    align-content: baseline;
+    cursor: pointer;
+}
+
+.button1 span{
+    margin-top: 6px;
+    margin-left: 25px;
+}
+
+.shadow{
+    background: white;
+    box-shadow: 5px 5px 8px 0px rgba(10, 10, 10, 0.2);
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--grey3);
+}
+
+.shadow-light{
+    box-shadow: 5px 5px 8px 0px rgba(10, 10, 10, 0.1);
+    border-radius: 10px;
+}
+
+.poly-container{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.container > *{
+    margin: 48px
+}
+
+.container > .header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container > .header > div > span{
+    display: block;
+}
+
+.invoice{
+    font-size: x-large;
+    color: black;
+    font-weight: bold;
+    text-align: right;
+}
+
+.invoice-num{
+    font-size: medium;
+    font-weight: bold;
+    text-align: right;
+    color: var(--grey4);
+}
+
+.list > span{
+    display: block;
+    font-size: smaller;
+}
+
+.list > p{
+    color: var(--grey4);
+}
+
+.t-row{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+.t-row *{
+    font-weight: normal;
+    text-align: left;
+    padding: 16px 16px;
+}
+
+.t-row .thead{
+    background: var(--blue);
+    color: white;
+}
+
+.total-container > div > div{
+    display: grid;
+    grid-template-columns: auto 62px;
+    margin-right: 62px;
+}
+
+.total-container > div > div span:first-child{
+    margin-right: 192px;
+}
+
+.total-container > div > div span:last-child{
+    text-align: right;
+}
+
+.total-container:last-child > div{
+    border-style: solid;
+    border-width: 1px 0 1px 1px;
+    border-color: var(--grey2);
+    border-radius: 50px 0 0 50px;
+    padding: 16px 0 16px 26px;
+}
+
+.subtotal{
+    font-size: larger;
+    margin-bottom: 7px;
+}
+
+.total{
+    font-size: x-large;
+}
+
+.total-container{
+    display: flex;
+    justify-content: flex-end;
+    grid-column: 1 / 3;
+    margin-right: 0!important;
+    margin: 0;
+}
+
+.left-panels{
+    padding: 16px 0;
+}
+
+.acord{
+    background: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.acord > .header{
+    display: flex;
+    justify-content: space-between;
+    font-size: larger;
+    cursor: pointer;
+    margin: 0px;
+    padding: 24px 22px;
+}
+
+.acord > .flex-grow > div > *{
+    margin: 24px 22px;
+}
+
+.acord > .header span:last-child{
+    color: var(--blue);
+}
+
+.acord > .flex-grow{
+    position: relative;
+    height: 100%;
+}
+
+.acord > .flex-grow > div{
+    overflow: auto;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.acord.active{
+    height: 50%;
+}
+
+.hidden{
+    display: none;
+}
+
+.shipto > span{
+    font-size: large;
+}
+
+.button2{
+    background: var(--blue);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    width: 20px;
+    height: 20px;
+    font-size: large;
+    padding: 0;
+}
+
+.round{
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--grey2);
+}
+
+.shipto > div{
+    padding: 18px 16px;
+    margin-top: 10px;
+}
+
+.shipto > div > div{
+    display: flex;
+}
+
+.shipto{
+    margin-right: 16px;
+}
+
+.input{
+    border-width: 0 0 2px 0;
+    border-color: var(--grey3);
+    outline: none;
+}
+
+.button3{
+    background: white;
+    color: var(--blue);
+    border-radius: 20px;
+    border-width: 1px;
+    border-color: var(--blue);
+    border-style: solid;
+    padding: 0 3px;
+    width: 15px;
+    height: 15px;
+    margin-left: -20px;
+}
+
+.right-panel{
+    position: relative;
+    height: 100%;
+}
+
+.right-panel > div{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    right: 0;
+    overflow: auto;
+}
